@@ -27,7 +27,13 @@ Array.prototype.myIncludes = function(elements, checkElement) {
   return false;
 };
 
-Array.prototype.myIndexOf = function() {
+Array.prototype.myIndexOf = function(elements, targetElement) {
+  for (let x = 0; x < elements.length; x++) {
+    if (elements[x] == targetElement) {
+      return x;
+    }
+  }
+  return -1;
 };
 
 Array.prototype.myPush = function(elements, elementToAdd) {
@@ -36,13 +42,21 @@ Array.prototype.myPush = function(elements, elementToAdd) {
   return modifiedElements;
 };
 
-Array.prototype.myLastIndexOf = function() {
+Array.prototype.myLastIndexOf = function(elements, targetElement) {
+  let numIndex = -1;
+  for (let x=0; x<elements.length; x++) {
+    if (elements[x] == targetElement) {
+      numIndex = x;
+    }
+  }
+  return numIndex;
 };
 
 Object.grabKeys = function() {
 };
 
 Object.grabValues = function() {
+
 };
 
 
