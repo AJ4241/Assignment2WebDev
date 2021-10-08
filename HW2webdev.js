@@ -1,6 +1,9 @@
 //Name: Aida Jevric
 
-Array.prototype.myEach = function() {
+Array.prototype.myEach = function(elements, callBackFun) {
+  for (let x = 0; x < elements.length; x++) {
+    callBackFun(elements[x]);
+  }
 };
 
 Array.prototype.myMap = function() {
