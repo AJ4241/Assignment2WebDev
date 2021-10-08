@@ -6,16 +6,30 @@ Array.prototype.myEach = function(elements, callBackFun) {
   }
 };
 
-Array.prototype.myMap = function() {
+Array.prototype.myMap = function(elements, callBackFun) {
+  let newArr = [];
+  for (let x = 0; x < elements.length; x++) {
+    newArr += callBackFun(elements[x]);
+  }
+  return newArr;
 };
 
-Array.prototype.myFilter = function() {
+Array.prototype.myFilter = function(elements, callBackFun) {
+  let newArr = [];
+  for (let x = 0; x < elements.length; x++) {
+    if (callBackfun(elements[x]) == true) {
+      newArr += elements[x];
+    }
+  }
+  return newArr;
 };
 
 Array.prototype.mySome = function() {
+  
 };
 
 Array.prototype.myEvery = function() {
+
 };
 
 Array.prototype.myReduce = function() {
