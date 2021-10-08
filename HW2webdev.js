@@ -24,8 +24,14 @@ Array.prototype.myFilter = function(elements, callBackFun) {
   return newArr;
 };
 
-Array.prototype.mySome = function() {
-  
+Array.prototype.mySome = function(elements, callBackFun) {
+  let check = false;
+  for (let x = 0; x<elements.length; x++) {
+    if (callbackFun(elements[x]) == true) {
+      return true;
+    }
+  }
+  return check;
 };
 
 Array.prototype.myEvery = function(elements, callBackFun) {
