@@ -52,11 +52,20 @@ Array.prototype.myLastIndexOf = function(elements, targetElement) {
   return numIndex;
 };
 
-Object.grabKeys = function() {
+Object.grabKeys = function(_object_) {
+  let listOfKeys = [];
+  for (let _key_ in _object_) {
+    listOfKeys += _key_;
+  }
+  return listOfKeys;
 };
 
-Object.grabValues = function() {
-
+Object.grabValues = function(objo) {
+  let listOfValues = [];
+  for (let ind in objo) {
+    listOfValues += objo[ind];
+  }
+  return listOfValues;
 };
 
 
