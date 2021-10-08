@@ -28,8 +28,14 @@ Array.prototype.mySome = function() {
   
 };
 
-Array.prototype.myEvery = function() {
-
+Array.prototype.myEvery = function(elements, callBackFun) {
+  let check = true;
+  for (let x = 0; x < elements.length; x++) {
+    if (callBackFun(elements[x]) == false) {
+      return false;
+    }
+  }
+  return check;
 };
 
 Array.prototype.myReduce = function() {
